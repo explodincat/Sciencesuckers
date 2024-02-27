@@ -1,0 +1,11 @@
+FROM node:20-alpine
+
+RUN apk add --no-cache git
+
+RUN git clone https://github.com/explodincat/Sciencesuckers.git
+
+WORKDIR /Sciencesuckers
+
+RUN npm install
+
+CMD npm start
